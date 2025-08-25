@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float a,b,c,d,r1,r2;
+    printf ("Quadratic equation: 'ax^2+bx+c=0'\n");
+    printf ("Enter the value of a: ");
+    scanf ("%f",&a);
+    printf ("Enter the value of b: ");
+    scanf ("%f",&b);
+    printf ("Enter the value of c: ");
+    scanf ("%f",&c);
+    d=(b*b)-(4*a*c);
+    if (d>0)
+    {
+        r1=(-b+sqrt(d))/(2*a);
+        r2=(-b-sqrt(d))/(2*a);
+        printf ("\nThe value of roots are:\nx1: %.2f\nx2: %.2f\n",r1,r2);
+    }
+    else if (d==0)
+    {
+        r1=r2=-b/(2*a);
+        printf ("\nThe value of roots are equal x: %.2f\n",r1,r2);
+    }
+    else
+        printf ("\nRoots have imaginary values\n");
+    return 0;
+}
